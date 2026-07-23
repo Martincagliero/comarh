@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/* ============================================================
+   COMARH S.A. — Design tokens (Tailwind v4 @theme)
+   Paleta muestreada del logo real.
+   ============================================================ */
+@theme {
+  --color-navy: #234e68;        /* azul petróleo — textos/headlines */
+  --color-navy-deep: #16384b;   /* superficies oscuras (footer, menú) */
+  --color-green: #4ca22f;
+  --color-green-light: #86c540;
+  --color-green-dark: #2e7d32;
+  --color-teal: #1b6e5e;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7f4;
+  --color-line: rgba(35, 78, 104, 0.14);
+
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), "Bodoni Moda", Georgia, serif;
+
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+::selection {
+  background: var(--color-green-light);
+  color: var(--color-navy);
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    font-weight: 600;
+  }
+}
+
+/* ============================================================
+   Utilidades de marca
+   ============================================================ */
+@layer utilities {
+  .display {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .h2-fluid {
+    font-size: clamp(2rem, 4.5vw, 3.75rem);
+    line-height: 0.98;
+    text-transform: uppercase;
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-green-dark);
+  }
+  .split-hidden {
+    visibility: hidden;
+  }
+
+  /* Wordmark serif gigante del hero (estilo eleos.la) */
+  .hero-wordmark {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 0.85;
+    color: #f5f0e8; /* blanco roto / crema, no blanco puro */
+    letter-spacing: clamp(-0.05em, -0.035em, -0.02em);
+    font-size: clamp(3.5rem, 22vw, 18rem);
+    white-space: nowrap;
+  }
+  @media (max-width: 640px) {
+    .hero-wordmark {
+      font-size: clamp(3.5rem, 18vw, 6rem);
+      letter-spacing: -0.02em;
+    }
+  }
+  .hero-meta {
+    font-family: var(--font-sans);
+    font-size: clamp(0.62rem, 0.78vw, 0.78rem);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: #f5f0e8;
+  }
+}
+
+/* Marquee */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+.marquee-paused:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Cursor custom */
+.cursor-dot {
+  mix-blend-mode: multiply;
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot {
+    display: none;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-green-dark);
+  outline-offset: 3px;
+}
