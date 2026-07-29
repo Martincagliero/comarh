@@ -8,7 +8,7 @@ import CtaFullbleed from "@/components/sections/CtaFullbleed";
 export const metadata: Metadata = {
   title: "Nosotros",
   description:
-    "Detrás de cada informe técnico hay un equipo comprometido con el ambiente y los recursos hídricos.",
+    "COMARH S.A.S. es una consultora de ingeniería conformada por un equipo interdisciplinario de profesionales de la Ingeniería.",
 };
 
 const gallery = [
@@ -42,21 +42,41 @@ export default function NosotrosPage() {
             <p className="eyebrow">Nosotros</p>
           </RevealOnScroll>
           <AnimatedText as="h1" className="display mt-4 max-w-[20ch]">
-            Porque el ambiente que cuidamos hoy es el que vamos a habitar mañana.
+            ¿Quiénes somos?
           </AnimatedText>
           <RevealOnScroll delay={0.1}>
-            <p className="mt-8 max-w-[60ch] text-[clamp(1.05rem,1.6vw,1.4rem)] text-navy/70">
-              Detrás de cada informe técnico y cada proyecto hay un equipo
-              comprometido con el ambiente, el uso responsable del agua y la
-              excelencia técnica. Trabajamos junto a empresas, municipios, ONGs y
-              particulares, aportando rigor, cercanía y soluciones a medida.
-            </p>
+            <div className="mt-8 max-w-[65ch] space-y-5 text-[clamp(1.05rem,1.6vw,1.4rem)] text-navy/70">
+              <p>
+                COMARH S.A.S. es una consultora de ingeniería conformada por un
+                equipo interdisciplinario de profesionales de la Ingeniería.
+              </p>
+              <p>
+                Con origen en la provincia de Santa Fe, brindamos soluciones
+                integrales para el diseño, planificación, gestión y ejecución
+                de obras, acompañando a organismos públicos, empresas e
+                industrias en cada etapa del proceso.
+              </p>
+              <p>
+                Nuestra experiencia nos permite desarrollar proyectos de
+                infraestructura, tratamiento de agua y efluentes, estudios de
+                factibilidad, redes de agua, cloacas y gas, estaciones de
+                bombeo, plantas potabilizadoras y de tratamiento, además de
+                proveer equipos especiales y asistencia técnica.
+              </p>
+              <p>
+                Nos distinguimos por combinar conocimiento técnico, innovación
+                y compromiso, ofreciendo soluciones eficientes, sostenibles y
+                adaptadas a las necesidades de cada cliente, con el objetivo
+                de generar un impacto positivo en las comunidades y el
+                ambiente.
+              </p>
+            </div>
           </RevealOnScroll>
         </div>
       </section>
 
       <section className="px-[clamp(1.25rem,5vw,5rem)] py-8">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:grid-cols-3">
           {gallery.map((src, i) => (
             <RevealOnScroll key={src} delay={i * 0.08}>
               <div className="relative aspect-[4/5] overflow-hidden rounded">
@@ -72,11 +92,10 @@ export default function NosotrosPage() {
           <RevealOnScroll>
             <h2 className="h2-fluid mb-12">Nuestro equipo</h2>
           </RevealOnScroll>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-6 md:grid-cols-3">
             {team.map((m, i) => (
               <RevealOnScroll key={i} delay={(i % 3) * 0.08}>
-                <div>
-                  <div className="mb-4 aspect-square overflow-hidden rounded-full bg-bg-alt" />
+                <div className="border-t border-line pt-4">
                   <h3 className="text-lg">{m.name}</h3>
                   <p className="text-sm text-navy/60">{m.role}</p>
                 </div>

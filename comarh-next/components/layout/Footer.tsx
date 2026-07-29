@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         {/* Fila media: columnas de links */}
-        <div className="mt-[clamp(3rem,7vw,6rem)] grid grid-cols-2 gap-8 md:grid-cols-3">
+        <div className="mt-[clamp(3rem,7vw,6rem)] grid grid-cols-1 gap-8 sm:grid-cols-3">
           <ul className="flex flex-col gap-2 text-[0.9rem] font-medium uppercase tracking-[0.08em]">
             <li><Link href="/nosotros" className="transition-opacity hover:opacity-60">Nosotros</Link></li>
             <li><Link href="/servicios" className="transition-opacity hover:opacity-60">Servicios</Link></li>

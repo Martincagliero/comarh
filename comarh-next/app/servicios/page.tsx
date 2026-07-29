@@ -15,39 +15,33 @@ export const metadata: Metadata = {
 const services = [
   {
     n: "01",
-    title: "Diseño",
-    text: "Estudios de base, relevamientos y diseño de soluciones técnicas ajustadas a cada sitio, cada normativa y cada objetivo del cliente.",
+    title: "Asesoramiento Técnico a Cooperativas y Comunas",
+    text: "Dirección y Representación Técnica frente a organismos de control: ENRESS / MOP.",
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=70",
   },
   {
     n: "02",
-    title: "Desarrollo de Proyectos",
-    text: "Formulación integral de proyectos ambientales y de recursos hídricos, desde la ingeniería conceptual hasta el proyecto ejecutivo.",
+    title: "Registro / Homologación de Perforaciones",
+    text: "Según Resolución N° 395/07.",
     image:
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=70",
   },
   {
     n: "03",
-    title: "Asistencia Técnica",
-    text: "Acompañamiento en obra y en gestión, monitoreo, control de cumplimiento normativo y respuesta a requerimientos de la autoridad.",
+    title: "Registro de Profesionales",
+    text: "Para Estudios, Proyectos y Conducción de Obras Hídricas.",
     image:
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=70",
   },
-  {
-    n: "04",
-    title: "Consultoría",
-    text: "Asesoramiento estratégico en materia ambiental e hídrica para empresas, municipios y organizaciones que necesitan decisiones informadas.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=70",
-  },
 ];
 
+// TODO: reemplazar por el número real de proyectos que confirme el cliente.
 const stats = [
-  { value: 120, prefix: "+", label: "Proyectos ejecutados" },
-  { value: 15, prefix: "+", label: "Años de experiencia" },
-  { value: 80, prefix: "+", label: "Clientes acompañados" },
-  { value: 5000, prefix: "+", label: "Hectáreas relevadas" },
+  { value: 150, prefix: "+", label: "Proyectos realizados" },
+  { value: 24, prefix: "", label: "Clientes acompañados" },
+  { value: new Date().getFullYear() - 2017, prefix: "", label: "Años de experiencia", note: "Desde 2017" },
+  { value: 50, prefix: "+", label: "Colaboradores", note: "Personas que nos acompañan" },
 ];
 
 export default function ServiciosPage() {
@@ -66,7 +60,7 @@ export default function ServiciosPage() {
             <p className="eyebrow">Servicios</p>
           </RevealOnScroll>
           <AnimatedText as="h1" className="display mt-4 max-w-[18ch]">
-            Cuatro formas de resolver un desafío ambiental.
+            Servicios que realizan.
           </AnimatedText>
         </div>
       </section>
@@ -119,6 +113,7 @@ export default function ServiciosPage() {
                 className="block text-[clamp(2.4rem,5vw,4rem)] font-semibold text-navy"
               />
               <p className="mt-2 text-sm text-navy/60">{s.label}</p>
+              {s.note && <p className="text-xs text-navy/40">{s.note}</p>}
             </div>
           ))}
         </div>

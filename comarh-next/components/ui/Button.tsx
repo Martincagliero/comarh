@@ -3,7 +3,7 @@
 /**
  * Button — pill con fill animado (slide-up del fondo verde en hover).
  * Envuelto en MagneticButton para el efecto magnético.
- * variant: "solid" (navy) | "light" (blanco sobre imágenes) | "ghost".
+ * variant: "solid" (navy) | "light" (blanco sobre imágenes) | "ghost" (verde siempre, header transparente).
  */
 import MagneticButton from "./MagneticButton";
 
@@ -15,7 +15,7 @@ const base =
 const variants: Record<Variant, string> = {
   solid: "border-navy bg-navy text-white",
   light: "border-white bg-white text-navy",
-  ghost: "border-current bg-transparent text-current",
+  ghost: "border-green-dark bg-green-dark text-white",
 };
 
 export default function Button({

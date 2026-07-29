@@ -53,7 +53,7 @@ export default function ProjectsGrid() {
                 <div className="aspect-[3/2] overflow-hidden">
                   <motion.div layoutId={`project-image-${p.slug}`} className="h-full w-full">
                     <Image
-                      src={p.image}
+                      src={p.cover}
                       alt={p.title}
                       width={700}
                       height={467}

@@ -5,6 +5,7 @@
  * y párrafo con RevealOnScroll.
  */
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { useReducedMotion } from "motion/react";
 import { gsap, registerGsap } from "@/lib/gsap";
@@ -60,17 +61,26 @@ export default function Intro() {
             as="h2"
             className="mt-4 text-[clamp(1.6rem,3.2vw,2.8rem)] font-medium leading-[1.1]"
           >
-            El cuidado del ambiente y el uso responsable del agua no admiten
-            atajos. Cada proyecto exige rigor técnico desde el primer relevamiento
-            hasta la entrega final.
+            Brindar soluciones integrales de ingeniería que respondan a las
+            necesidades de nuestros clientes mediante un enfoque
+            interdisciplinario, innovador y sostenible.
           </AnimatedText>
           <RevealOnScroll delay={0.1}>
             <p className="mt-6 max-w-[52ch] text-[clamp(1.05rem,1.6vw,1.4rem)] text-navy/70">
-              En COMARH combinamos ingeniería, ciencias ambientales y experiencia
-              de campo para acompañar a nuestros clientes en cada etapa:
-              diagnóstico, diseño, gestión de permisos y ejecución, sin perder de
-              vista los plazos ni la calidad técnica.
+              Diseñamos, gestionamos y ejecutamos proyectos de recursos
+              hídricos, medio ambiente, infraestructura y sistemas especiales,
+              garantizando calidad técnica, eficiencia y compromiso en cada
+              etapa del proceso.
             </p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <Link
+              href="/nosotros"
+              className="group mt-6 inline-flex items-center gap-2 text-[0.8rem] font-medium uppercase tracking-[0.04em] text-navy"
+            >
+              Conocé más sobre nosotros
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
           </RevealOnScroll>
         </div>
       </div>
