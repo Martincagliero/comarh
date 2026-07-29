@@ -36,9 +36,8 @@ const services = [
   },
 ];
 
-// TODO: reemplazar por el número real de proyectos que confirme el cliente.
 const stats = [
-  { value: 150, prefix: "+", label: "Proyectos realizados" },
+  { value: 60, prefix: "+", label: "Proyectos realizados" },
   { value: 24, prefix: "", label: "Clientes acompañados" },
   { value: new Date().getFullYear() - 2017, prefix: "", label: "Años de experiencia", note: "Desde 2017" },
   { value: 50, prefix: "+", label: "Colaboradores", note: "Personas que nos acompañan" },

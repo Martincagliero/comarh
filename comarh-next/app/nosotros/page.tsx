@@ -18,12 +18,8 @@ const gallery = [
 ];
 
 const team = [
-  { name: "Nombre Apellido", role: "Dirección técnica" },
-  { name: "Nombre Apellido", role: "Ingeniería ambiental" },
-  { name: "Nombre Apellido", role: "Recursos hídricos" },
-  { name: "Nombre Apellido", role: "Gestión de proyectos" },
-  { name: "Nombre Apellido", role: "Trabajo de campo" },
-  { name: "Nombre Apellido", role: "Asuntos normativos" },
+  { name: "Ing. Fabián Cabeza", role: "Director técnico" },
+  { name: "Marisa Pasquero", role: "Responsable administración" },
 ];
 
 export default function NosotrosPage() {
