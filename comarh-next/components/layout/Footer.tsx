@@ -40,7 +40,7 @@ export default function Footer() {
             </button>
           </div>
 
-          <div className="flex justify-between gap-6 text-[0.72rem] font-medium uppercase tracking-[0.12em] text-navy-deep/80 md:justify-end md:gap-16">
+          <div className="flex flex-col gap-3 text-[0.72rem] font-medium uppercase tracking-[0.12em] text-navy-deep/80 md:flex-row md:justify-end md:gap-16">
             <a
               href="mailto:contacto@consultoracomarh.com"
               className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
@@ -50,7 +50,7 @@ export default function Footer() {
             </a>
             <span className="inline-flex items-center gap-2">
               <span className="text-green">●</span>
-              Santa Fe, Argentina
+              Sunchales, Santa Fe, Argentina
             </span>
           </div>
         </div>

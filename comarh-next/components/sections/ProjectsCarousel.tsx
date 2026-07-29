@@ -58,17 +58,17 @@ export default function ProjectsCarousel() {
               </p>
             </RevealOnScroll>
           </div>
-          <div className="flex items-center gap-6">
-            <span className="tabular-nums text-sm text-navy/60">
+          <div className="flex items-center gap-3 sm:gap-6">
+            <span className="tabular-nums text-xs text-navy/60 sm:text-sm">
               {String(active + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
             </span>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <button
                 type="button"
                 onClick={() => slide(-1)}
                 aria-label="Proyecto anterior"
                 data-cursor="hover"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-navy/70 transition-colors hover:border-navy hover:text-navy"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-navy/70 transition-colors hover:border-navy hover:text-navy sm:h-10 sm:w-10"
               >
                 ←
               </button>
@@ -77,14 +77,14 @@ export default function ProjectsCarousel() {
                 onClick={() => slide(1)}
                 aria-label="Proyecto siguiente"
                 data-cursor="hover"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-navy/70 transition-colors hover:border-navy hover:text-navy"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-navy/70 transition-colors hover:border-navy hover:text-navy sm:h-10 sm:w-10"
               >
                 →
               </button>
             </div>
             <Link
               href="/proyectos"
-              className="group inline-flex items-center gap-2 text-[0.8rem] font-medium uppercase tracking-[0.04em] text-green-dark"
+              className="group inline-flex items-center gap-2 text-[0.68rem] font-medium uppercase tracking-[0.04em] text-green-dark sm:text-[0.8rem]"
             >
               Ver todos los proyectos
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -106,7 +106,7 @@ export default function ProjectsCarousel() {
             key={p.slug}
             onViewportEnter={() => setActive(i)}
             viewport={{ amount: 0.6 }}
-            className="h-auto w-[80vw] shrink-0 sm:w-[46vw] lg:w-[30vw]"
+            className="h-auto w-[68vw] shrink-0 sm:w-[46vw] lg:w-[30vw]"
           >
             <motion.div
               whileHover={{ scale: 1.02 }}

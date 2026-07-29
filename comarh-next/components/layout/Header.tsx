@@ -8,7 +8,7 @@
  */
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useScroll, useMotionValueEvent } from "motion/react";
 import { useUI } from "@/lib/store";
 import Button from "@/components/ui/Button";
@@ -23,20 +23,29 @@ const links = [
 export default function Header() {
   const { scrollY } = useScroll();
   const [solid, setSolid] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
   const { openContact, toggleMenu, menuOpen } = useUI();
 
-  useMotionValueEvent(scrollY, "change", (v) => setSolid(v > 50));
+  useMotionValueEvent(scrollY, "change", (v) => {
+    setSolid(v > 50);
+    const diff = v - lastY.current;
+    if (v < 80) setHidden(false);
+    else if (diff > 4) setHidden(true);
+    else if (diff < -4) setHidden(false);
+    lastY.current = v;
+  });
 
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-[100] transition-colors duration-400 ${
+        className={`fixed inset-x-0 top-0 z-[100] transition-[background-color,box-shadow,transform] duration-400 ${
           solid
             ? "bg-white/80 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md"
             : "bg-transparent"
-        }`}
+        } ${hidden && !menuOpen ? "-translate-y-full" : "translate-y-0"}`}
       >
-        <div className="flex h-[76px] items-center justify-between gap-6 px-[clamp(1.25rem,5vw,5rem)]">
+        <div className="flex h-[60px] items-center justify-between gap-6 px-[clamp(1.25rem,5vw,5rem)] md:h-[76px]">
           <Link href="/" className="flex items-center" aria-label="COMARH S.A. — Inicio">
             <Image
               src={solid ? "/img/logo-scroll.png" : "/img/logo-white-mark.png"}
@@ -44,7 +53,7 @@ export default function Header() {
               width={320}
               height={320}
               priority
-              className={solid ? "h-[58px] w-auto" : "h-[64px] w-auto"}
+              className={solid ? "h-[42px] w-auto md:h-[58px]" : "h-[46px] w-auto md:h-[64px]"}
             />
           </Link>
 
@@ -75,30 +84,30 @@ export default function Header() {
               </Button>
             </div>
 
-            <button
-              onClick={toggleMenu}
-              aria-label="Abrir menú"
-              aria-expanded={menuOpen}
-              className={`flex flex-col gap-[5px] p-1.5 md:hidden ${
+            <div
+              className={`flex items-center gap-4 md:hidden ${
                 solid ? "text-navy" : "text-white"
               }`}
             >
-              <span
-                className={`h-0.5 w-7 bg-current transition-transform duration-300 ${
-                  menuOpen ? "translate-y-[7px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`h-0.5 w-7 bg-current transition-opacity duration-200 ${
-                  menuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`h-0.5 w-7 bg-current transition-transform duration-300 ${
-                  menuOpen ? "-translate-y-[7px] -rotate-45" : ""
-                }`}
-              />
-            </button>
+              <button
+                type="button"
+                onClick={openContact}
+                data-cursor="hover"
+                className="text-[0.68rem] font-medium uppercase tracking-[0.14em]"
+              >
+                Trabajemos juntos
+              </button>
+              <button
+                type="button"
+                onClick={toggleMenu}
+                aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+                aria-expanded={menuOpen}
+                data-cursor="hover"
+                className="text-[0.68rem] font-medium uppercase tracking-[0.14em]"
+              >
+                {menuOpen ? "Cerrar" : "Menú"}
+              </button>
+            </div>
           </nav>
         </div>
       </header>

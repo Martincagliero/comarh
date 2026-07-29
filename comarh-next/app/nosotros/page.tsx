@@ -76,11 +76,11 @@ export default function NosotrosPage() {
       </section>
 
       <section className="px-[clamp(1.25rem,5vw,5rem)] py-8">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-3 gap-2 sm:gap-4">
           {gallery.map((src, i) => (
             <RevealOnScroll key={src} delay={i * 0.08}>
               <div className="relative aspect-[4/5] overflow-hidden rounded">
-                <Image src={src} alt="" fill sizes="33vw" className="object-cover" />
+                <Image src={src} alt="" fill sizes="(max-width: 640px) 33vw, 33vw" className="object-cover" />
               </div>
             </RevealOnScroll>
           ))}
