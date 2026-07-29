@@ -84,7 +84,7 @@ export default function ProjectsCarousel() {
             </div>
             <Link
               href="/proyectos"
-              className="group inline-flex items-center gap-2 text-[0.68rem] font-medium uppercase tracking-[0.04em] text-green-dark sm:text-[0.8rem]"
+              className="group ml-3 inline-flex items-center gap-2 text-[0.68rem] font-medium uppercase tracking-[0.04em] text-green-dark sm:ml-6 sm:text-[0.8rem]"
             >
               Ver todos los proyectos
               <span className="transition-transform group-hover:translate-x-1">→</span>

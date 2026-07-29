@@ -18,7 +18,6 @@ const schema = z.object({
   nombre: z.string().min(2, "Ingresá tu nombre"),
   apellido: z.string().min(2, "Ingresá tu apellido"),
   email: z.string().email("Email inválido"),
-  tipo: z.string().min(1, "Seleccioná una opción"),
   mensaje: z.string().min(10, "Contanos un poco más (mín. 10 caracteres)"),
 });
 type FormData = z.infer<typeof schema>;
@@ -55,9 +54,12 @@ export default function ContactModal() {
   }, [contactOpen, closeContact]);
 
   const onSubmit = async (data: FormData) => {
-    // Simulación de envío. TODO: conectar a Formspree/EmailJS/API real.
-    await new Promise((r) => setTimeout(r, 900));
-    console.log("Consulta:", data);
+    // Arma el mail y abre el cliente de correo del usuario (no se envía nada desde acá)
+    const subject = encodeURIComponent(`Consulta desde la web — ${data.nombre} ${data.apellido}`);
+    const body = encodeURIComponent(
+      `Nombre: ${data.nombre} ${data.apellido}\nEmail: ${data.email}\n\nMensaje:\n${data.mensaje}`
+    );
+    window.location.href = `mailto:contacto@consultoracomarh.com?subject=${subject}&body=${body}`;
   };
 
   const close = () => {
@@ -122,9 +124,9 @@ export default function ContactModal() {
                       transition={{ duration: 0.4, delay: 0.5, ease: "easeOut" }}
                     />
                   </svg>
-                  <h2 className="text-2xl">¡Gracias!</h2>
+                  <h2 className="text-2xl">¡Listo!</h2>
                   <p className="mt-2 text-navy/70">
-                    Te vamos a contactar a la brevedad.
+                    Se abrió tu programa de correo con el mensaje listo. Solo falta que lo envíes desde ahí.
                   </p>
                   <button onClick={close} className="mt-8 text-green-dark underline underline-offset-4">
                     Cerrar
@@ -160,18 +162,6 @@ export default function ContactModal() {
                       {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email.message}</p>}
                     </div>
                     <div>
-                      <label className="mb-1.5 block text-xs font-medium text-navy/70">Tipo de consulta *</label>
-                      <select className={field} defaultValue="" {...register("tipo")}>
-                        <option value="" disabled>Seleccioná una opción</option>
-                        <option>Empresa privada</option>
-                        <option>Organismo público</option>
-                        <option>ONG</option>
-                        <option>Particular</option>
-                        <option>Otro</option>
-                      </select>
-                      {errors.tipo && <p className="mt-1 text-xs text-red-600">{errors.tipo.message}</p>}
-                    </div>
-                    <div>
                       <label className="mb-1.5 block text-xs font-medium text-navy/70">Mensaje *</label>
                       <textarea rows={4} className={`${field} resize-y`} {...register("mensaje")} />
                       {errors.mensaje && <p className="mt-1 text-xs text-red-600">{errors.mensaje.message}</p>}
@@ -184,10 +174,10 @@ export default function ContactModal() {
                       {isSubmitting ? (
                         <>
                           <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />
-                          Enviando…
+                          Abriendo…
                         </>
                       ) : (
-                        <>Enviar consulta <span className="transition-transform group-hover:translate-x-1">→</span></>
+                        <>Enviar por mail <span className="transition-transform group-hover:translate-x-1">→</span></>
                       )}
                     </button>
                   </form>

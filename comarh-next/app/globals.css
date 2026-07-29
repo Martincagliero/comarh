@@ -87,6 +87,13 @@ html.lenis body {
     visibility: hidden;
   }
 
+  /* Máscara de reveal de AnimatedText: solo oculta overflow vertical (el yPercent slide-in),
+     overflow-x visible para no recortar signos con overshoot lateral como "¿" */
+  .split-line {
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+
   /* Wordmark serif gigante del hero (estilo eleos.la) */
   .hero-wordmark {
     font-family: var(--font-display);

@@ -148,7 +148,10 @@ export default function ProjectDetail({ project }: { project: Project }) {
                         className="object-contain p-1.5 transition-transform duration-400 group-hover:scale-105"
                       />
                       {caption && (
-                        <span className="absolute inset-x-0 bottom-0 bg-navy/85 px-2 py-1.5 text-left text-[0.68rem] leading-snug text-white">
+                        <span
+                          title={caption}
+                          className="absolute inset-x-0 bottom-0 line-clamp-2 bg-navy/85 px-2 py-1.5 text-left text-[0.62rem] leading-snug text-white"
+                        >
                           {caption}
                         </span>
                       )}

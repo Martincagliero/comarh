@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ProyectosPage() {
   return (
     <>
-      <section className="px-[clamp(1.25rem,5vw,5rem)] pb-12 pt-40">
+      <section className="px-[clamp(1.25rem,5vw,5rem)] pb-12 pt-28 sm:pt-40">
         <div className="mx-auto w-full max-w-[1440px]">
           <Link
             href="/"

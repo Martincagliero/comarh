@@ -46,7 +46,7 @@ export default function AnimatedText({
     const ctx = gsap.context(() => {
       split = new SplitText(el, {
         type: splitBy === "chars" ? "chars,words" : "lines,words",
-        linesClass: "overflow-hidden",
+        linesClass: "split-line",
       });
       const targets = splitBy === "chars" ? split.chars : split.words;
       el.style.visibility = "visible";

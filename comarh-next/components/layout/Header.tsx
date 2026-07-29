@@ -2,7 +2,8 @@
 
 /**
  * Header sticky.
- * - Framer useScroll + useMotionValueEvent: bg transparente → blanco/blur pasando 50px.
+ * - Transparente (logo/texto blanco) sobre el hero; blanco sólido al pasar 50px de scroll.
+ * - Se oculta al scrollear hacia abajo y reaparece al subir (excepto cerca del top).
  * - Logo a color, nav en mayúsculas, LiveClock, CTA que abre el modal (Zustand).
  * - Burger que togglea el menú mobile.
  */
@@ -40,9 +41,7 @@ export default function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-[100] transition-[background-color,box-shadow,transform] duration-400 ${
-          solid
-            ? "bg-white/80 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md"
-            : "bg-transparent"
+          solid ? "bg-white shadow-[0_1px_0_var(--color-line)]" : "bg-transparent"
         } ${hidden && !menuOpen ? "-translate-y-full" : "translate-y-0"}`}
       >
         <div className="flex h-[60px] items-center justify-between gap-6 px-[clamp(1.25rem,5vw,5rem)] md:h-[76px]">
@@ -76,10 +75,7 @@ export default function Header() {
             </ul>
 
             <div className={`hidden md:block ${solid ? "" : "text-white"}`}>
-              <Button
-                variant={solid ? "solid" : "ghost"}
-                onClick={openContact}
-              >
+              <Button variant={solid ? "solid" : "ghost"} onClick={openContact}>
                 Trabajemos juntos
               </Button>
             </div>
@@ -93,9 +89,9 @@ export default function Header() {
                 type="button"
                 onClick={openContact}
                 data-cursor="hover"
-                className="text-[0.68rem] font-medium uppercase tracking-[0.14em]"
+                className="text-[0.68rem] font-medium uppercase tracking-[0.14em] underline underline-offset-4"
               >
-                Trabajemos juntos
+                Trabajemos <span aria-hidden>→</span>
               </button>
               <button
                 type="button"
