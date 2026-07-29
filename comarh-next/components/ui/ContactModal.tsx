@@ -82,7 +82,8 @@ export default function ContactModal() {
             onClick={close}
           />
           <motion.div
-            className="absolute right-0 top-0 flex h-full w-full max-w-[560px] flex-col overflow-y-auto bg-white p-[clamp(1.75rem,4vw,2.75rem)]"
+            className="absolute right-0 top-0 flex h-full w-full max-w-[560px] flex-col overflow-y-auto overscroll-contain bg-white p-[clamp(1.75rem,4vw,2.75rem)]"
+            data-lenis-prevent
             variants={reduce ? undefined : panel}
             initial={reduce ? { opacity: 0 } : "hidden"}
             animate={reduce ? { opacity: 1 } : "show"}
