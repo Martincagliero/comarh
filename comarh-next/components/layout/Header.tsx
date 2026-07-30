@@ -19,6 +19,7 @@ const links = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/servicios", label: "Servicios" },
   { href: "/proyectos", label: "Proyectos" },
+  { href: "/grundfos", label: "Equipos" },
 ];
 
 export default function Header() {
