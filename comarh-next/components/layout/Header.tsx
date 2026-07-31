@@ -53,7 +53,7 @@ export default function Header() {
               width={solid ? 596 : 512}
               height={solid ? 842 : 512}
               priority
-              className={solid ? "h-[42px] w-auto md:h-[58px]" : "h-[46px] w-auto md:h-[64px]"}
+              className={solid ? "h-[52px] w-auto md:h-[72px]" : "h-[46px] w-auto md:h-[64px]"}
             />
           </Link>
 
