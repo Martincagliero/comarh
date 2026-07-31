@@ -50,8 +50,8 @@ export default function Header() {
             <Image
               src={solid ? "/img/logo-scroll.png" : "/img/logo-white-mark.png"}
               alt="COMARH S.A."
-              width={320}
-              height={320}
+              width={solid ? 596 : 512}
+              height={solid ? 842 : 512}
               priority
               className={solid ? "h-[42px] w-auto md:h-[58px]" : "h-[46px] w-auto md:h-[64px]"}
             />

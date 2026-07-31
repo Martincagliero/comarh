@@ -45,6 +45,7 @@ export const metadata: Metadata = {
       "Diseño, desarrollo de proyectos, asistencia técnica y consultoría ambiental a medida de cada cliente.",
     locale: "es_AR",
     type: "website",
+    images: [{ url: "/logoentero.png", width: 596, height: 842, alt: "COMARH S.A." }],
   },
 };
 
