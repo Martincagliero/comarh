@@ -43,6 +43,28 @@ const stats = [
   { value: 50, prefix: "+", label: "Colaboradores", note: "Personas que nos acompañan" },
 ];
 
+const equipmentPlants = [
+  {
+    n: "01",
+    title: "Plantas Potabilizadoras Compactas fabricadas en PRFV",
+    provision: "Provisión, Montaje y Puesta en Marcha.",
+    advantages: ["Diseño Compacto y Modular", "Eficiencia Tratamiento", "Operación Automatizada"],
+  },
+  {
+    n: "02",
+    title: "Plantas Tratamiento Aguas Residuales Compactas fabricadas en PRFV",
+    provision: "Provisión, Montaje y Puesta en Marcha.",
+    advantages: [
+      "Diseño Compacto y Modular",
+      "Eficiencia Tratamiento",
+      "Bajo Costo Mantenimiento",
+      "Operación Automatizada",
+      "Condiciones Vuelco: según normativa",
+      "Rango Tratamiento: 50 Hab – 1.000 Hab.",
+    ],
+  },
+];
+
 export default function ServiciosPage() {
   return (
     <>
@@ -99,6 +121,48 @@ export default function ServiciosPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="px-[clamp(1.25rem,5vw,5rem)] py-[clamp(4rem,8vw,7rem)]">
+        <div className="mx-auto w-full max-w-[1440px] border-t border-line pt-12">
+          <RevealOnScroll>
+            <p className="eyebrow">Provisión de Equipos</p>
+          </RevealOnScroll>
+          <AnimatedText as="h2" className="h2-fluid mt-3 max-w-[38ch]">
+            Provisión de equipos de Tratamiento de Agua y Efluentes.
+          </AnimatedText>
+          <RevealOnScroll delay={0.1}>
+            <p className="mt-4 max-w-[60ch] text-[clamp(1.05rem,1.5vw,1.3rem)] text-navy/70">
+              Somos proveedores de equipos de Tratamiento de Agua y Efluentes,
+              respetando y cumplimentando el marco normativo para cada caso.
+            </p>
+          </RevealOnScroll>
+
+          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+            {equipmentPlants.map((p) => (
+              <RevealOnScroll key={p.n} delay={0.1}>
+                <div className="flex h-full flex-col rounded border border-navy/10 bg-white p-6 sm:p-8">
+                  <span className="text-[0.8rem] font-semibold tracking-[0.1em] text-green-dark">
+                    {p.n}
+                  </span>
+                  <h3 className="mt-3 text-[clamp(1.3rem,2.2vw,1.7rem)]">{p.title}</h3>
+                  <p className="mt-3 text-navy/70">{p.provision}</p>
+                  <p className="mt-6 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-navy/50">
+                    Ventajas
+                  </p>
+                  <ul className="mt-3 flex flex-col gap-2">
+                    {p.advantages.map((a) => (
+                      <li key={a} className="flex items-start gap-2 text-navy/80">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-green-dark" />
+                        {a}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 

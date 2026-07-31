@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "@/components/ui/AnimatedText";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
@@ -11,15 +10,9 @@ export const metadata: Metadata = {
     "COMARH S.A.S. es una consultora de ingeniería conformada por un equipo interdisciplinario de profesionales de la Ingeniería.",
 };
 
-const gallery = [
-  "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=70",
-  "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=70",
-  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=70",
-];
-
 const team = [
-  { name: "Ing. Fabián Cabeza", role: "Director técnico" },
-  { name: "Marisa Pasquero", role: "Responsable administración" },
+  { name: "Ing. Fabián Cabeza", role: "Director Técnico" },
+  { name: "Marisa Pasquero", role: "Responsable Administración" },
 ];
 
 export default function NosotrosPage() {
@@ -68,18 +61,6 @@ export default function NosotrosPage() {
               </p>
             </div>
           </RevealOnScroll>
-        </div>
-      </section>
-
-      <section className="px-[clamp(1.25rem,5vw,5rem)] py-8">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-3 gap-2 sm:gap-4">
-          {gallery.map((src, i) => (
-            <RevealOnScroll key={src} delay={i * 0.08}>
-              <div className="relative aspect-[4/5] overflow-hidden rounded">
-                <Image src={src} alt="" fill sizes="(max-width: 640px) 33vw, 33vw" className="object-cover" />
-              </div>
-            </RevealOnScroll>
-          ))}
         </div>
       </section>
 

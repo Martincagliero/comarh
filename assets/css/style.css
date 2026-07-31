@@ -407,6 +407,17 @@ h1, h2, h3, h4 {
 .card__meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-soft); margin-top: auto; flex-wrap: wrap; }
 .card__meta b { color: var(--accent); font-weight: 600; }
 .card__link { margin-top: 0.8rem; }
+
+.equip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+.equip-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; height: 100%; }
+.equip-card__num { font-size: 0.85rem; color: var(--accent); font-weight: 600; letter-spacing: 0.1em; }
+.equip-card__title { font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 600; margin: 0.75rem 0 0; }
+.equip-card__provision { color: var(--text-soft); margin-top: 0.75rem; }
+.equip-card__label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-soft); margin-top: 1.5rem; }
+.equip-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+.equip-list li { display: flex; align-items: flex-start; gap: 0.6rem; color: var(--text); }
+.equip-list li::before { content: ""; width: 6px; height: 6px; margin-top: 0.5em; border-radius: 999px; background: var(--accent); flex-shrink: 0; }
+
 .badge {
   align-self: flex-start;
   font-size: 0.72rem;
@@ -678,6 +689,7 @@ h1, h2, h3, h4 {
   .method__cols { grid-template-columns: 1fr; gap: 1.5rem; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .gallery, .team, .grid-projects { grid-template-columns: repeat(2, 1fr); }
+  .equip-grid { grid-template-columns: 1fr; }
   .feature { grid-template-columns: 1fr; }
   .feature:nth-child(even) .feature__media { order: 0; }
   .stats { grid-template-columns: repeat(2, 1fr); }
@@ -686,6 +698,7 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 560px) {
   .footer__grid, .gallery, .team, .grid-projects, .stats { grid-template-columns: 1fr; }
+  .equip-card { padding: 1.5rem; }
   .footer__cta { flex-direction: column; align-items: flex-start; }
 }
 
