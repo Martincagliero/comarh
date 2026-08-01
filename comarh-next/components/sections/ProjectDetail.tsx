@@ -15,6 +15,7 @@ import { scrollTo } from "@/lib/store";
 
 export default function ProjectDetail({ project }: { project: Project }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [coverOpen, setCoverOpen] = useState(false);
 
   useEffect(() => {
     if (lightboxIndex === null) return;
@@ -35,6 +36,17 @@ export default function ProjectDetail({ project }: { project: Project }) {
     };
   }, [lightboxIndex, project.gallery.length]);
 
+  useEffect(() => {
+    if (!coverOpen) return;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setCoverOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [coverOpen]);
+
   return (
     <>
       <section className="px-[clamp(1.25rem,5vw,5rem)] pt-28">
@@ -45,19 +57,34 @@ export default function ProjectDetail({ project }: { project: Project }) {
           >
             ← Volver a proyectos
           </Link>
-          <div className="flex items-stretch gap-3 sm:gap-5">
+          <div className="flex items-stretch justify-center gap-3 sm:gap-5">
             <motion.div
               layoutId={`project-image-${project.slug}`}
-              className="relative aspect-[16/9] max-h-[55vh] flex-1 overflow-hidden rounded"
+              className="overflow-hidden rounded"
             >
-              <Image
-                src={project.cover}
-                alt={project.title}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover"
-              />
+              {project.cover ? (
+                <button
+                  type="button"
+                  aria-label="Ampliar imagen"
+                  data-cursor="hover"
+                  onClick={() => setCoverOpen(true)}
+                  className="block"
+                >
+                  <Image
+                    src={project.cover}
+                    alt={project.title}
+                    width={1920}
+                    height={1080}
+                    priority
+                    sizes="70vw"
+                    className="block max-h-[55vh] w-auto max-w-[80vw] object-contain sm:max-w-[70vw]"
+                  />
+                </button>
+              ) : (
+                <div className="flex h-[38vh] w-[65vw] max-w-[820px] items-center justify-center bg-gradient-to-br from-navy-deep to-navy text-center text-sm font-semibold uppercase tracking-wide text-white/60 sm:h-[45vh]">
+                  {project.categoryLabel}
+                </div>
+              )}
             </motion.div>
             <button
               type="button"
@@ -243,6 +270,44 @@ export default function ProjectDetail({ project }: { project: Project }) {
                   </p>
                 )}
               </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {coverOpen && project.cover && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-navy-deep/95 px-[clamp(1rem,4vw,3rem)] py-[clamp(2rem,6vw,4rem)]"
+            onClick={() => setCoverOpen(false)}
+          >
+            <button
+              type="button"
+              aria-label="Cerrar"
+              onClick={() => setCoverOpen(false)}
+              className="absolute right-5 top-5 z-10 text-2xl text-white/80 transition-colors hover:text-white"
+            >
+              ✕
+            </button>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative h-[80vh] w-full max-w-5xl"
+            >
+              <Image
+                src={project.cover}
+                alt={project.title}
+                fill
+                sizes="90vw"
+                className="object-contain"
+              />
             </motion.div>
           </motion.div>
         )}

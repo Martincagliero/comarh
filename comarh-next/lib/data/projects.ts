@@ -11,7 +11,7 @@ export interface Project {
   location?: string;
   category: ProjectCategory;
   categoryLabel: string;
-  cover: string; // imagen de portada, ruta en /public
+  cover?: string; // imagen de portada, ruta en /public (opcional: si falta, se muestra un placeholder)
   gallery: string[]; // imágenes/planos adicionales, ruta en /public
   galleryCaptions?: Record<string, string>; // texto asociado a una imagen puntual de gallery (se muestra en hover/tap)
   client?: string;
@@ -136,7 +136,10 @@ export const projects: Project[] = [
     category: "civil-hidraulica",
     categoryLabel: categoryLabels["civil-hidraulica"],
     cover: "/img/proyectos/verificaciones-hidraulicas-perales-aguiar/cover.png",
-    gallery: [],
+    gallery: ["/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png"],
+    galleryCaptions: {
+      "/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png": "Planos de detalle electromecánico",
+    },
     client: "Constructora Perales Aguiar S.A.",
     year: "2022",
   },
@@ -148,16 +151,14 @@ export const projects: Project[] = [
     location: "Saguier, Santa Fe",
     category: "civil-hidraulica",
     categoryLabel: categoryLabels["civil-hidraulica"],
-    cover: "/img/proyectos/alteo-proteccion-planta-urbana-saguier/cover.png",
+    cover: "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g3.png",
     gallery: [
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g1.png",
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g2.png",
-      "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g3.png",
     ],
     galleryCaptions: {
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g1.png": "Sección transversal Prog. +2700 — Traza Norte",
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g2.png": "Mancha de inundación y alcance proyectado",
-      "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g3.png": "Perfil longitudinal — Traza Norte",
     },
     comitente: "Comité de Cuenca Canal Principal Saguier",
     year: "2024",
@@ -174,10 +175,12 @@ export const projects: Project[] = [
     gallery: [
       "/img/proyectos/renovacion-colectores-cloacales-rafaela/g1.png",
       "/img/proyectos/renovacion-colectores-cloacales-rafaela/g2.png",
+      "/img/proyectos/renovacion-colectores-cloacales-rafaela/g3.png",
     ],
     galleryCaptions: {
       "/img/proyectos/renovacion-colectores-cloacales-rafaela/g1.png": "Detalle de cruce y salto hidráulico",
       "/img/proyectos/renovacion-colectores-cloacales-rafaela/g2.png": "Detalle de cruce y salto hidráulico",
+      "/img/proyectos/renovacion-colectores-cloacales-rafaela/g3.png": "Secciones — ingreso a Planta Depuradora de Líquidos Cloacales",
     },
     client: "Aguas Santafesinas S.A.",
     year: "2025",
@@ -190,16 +193,18 @@ export const projects: Project[] = [
     location: "Departamento Castellanos, Rafaela",
     category: "civil-hidraulica",
     categoryLabel: categoryLabels["civil-hidraulica"],
-    cover: "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/cover.jpeg",
+    cover: "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/cover.png",
     gallery: [
       "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g1.png",
       "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g2.png",
       "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g3.png",
+      "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g4.jpeg",
     ],
     galleryCaptions: {
       "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g1.png": "Alcantarilla proyectada en salida de reservorios",
       "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g2.png": "Reservorio proyectado — sector Microestadio",
       "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g3.png": "Proyecto vial y pluvial — sector Velódromo",
+      "/img/proyectos/parque-metropolitano-villa-olimpica-rafaela/g4.jpeg": "Vista aérea del área de intervención",
     },
     client: "Bauzá Ingeniería - EPC. Odesur Rafaela (UTE)",
     year: "2026",

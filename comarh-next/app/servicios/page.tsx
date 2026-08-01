@@ -17,15 +17,14 @@ const services = [
     n: "01",
     title: "Asesoramiento Técnico a Cooperativas y Comunas",
     text: "Dirección y Representación Técnica frente a organismos de control: ENRESS / MOP.",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=70",
+    image: "/img/servicios/asesoramiento-tecnico.png",
+    imagePosition: "top",
   },
   {
     n: "02",
     title: "Registro / Homologación de Perforaciones",
     text: "Según Resolución N° 395/07.",
-    image:
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=70",
+    image: "/img/servicios/registro-homologacion.jpeg",
   },
   {
     n: "03",
@@ -80,8 +79,8 @@ export default function ServiciosPage() {
           <RevealOnScroll>
             <p className="eyebrow">Servicios</p>
           </RevealOnScroll>
-          <AnimatedText as="h1" className="display mt-4 max-w-[18ch]">
-            Servicios que realizan.
+          <AnimatedText as="h1" className="display mt-4 max-w-none sm:whitespace-nowrap">
+            Servicios que realizamos.
           </AnimatedText>
         </div>
       </section>
@@ -103,6 +102,7 @@ export default function ServiciosPage() {
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
+                    style={{ objectPosition: s.imagePosition ?? "center" }}
                   />
                 </div>
               </RevealOnScroll>

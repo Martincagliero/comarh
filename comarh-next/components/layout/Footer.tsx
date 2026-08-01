@@ -40,15 +40,22 @@ export default function Footer() {
             </button>
           </div>
 
-          <div className="flex flex-col gap-3 text-[0.72rem] font-medium uppercase tracking-[0.12em] text-navy-deep/80 md:flex-row md:justify-end md:gap-16">
+          <div className="flex flex-col gap-3 text-[0.72rem] font-medium uppercase tracking-[0.12em] text-navy-deep/80 md:flex-row md:justify-end md:gap-16 lg:mr-[-2rem] xl:mr-[-4rem]">
             <a
               href="mailto:contacto@consultoracomarh.com"
-              className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
+              className="inline-flex items-center gap-2 whitespace-nowrap transition-opacity hover:opacity-60"
             >
               <span className="text-green">●</span>
               contacto@consultoracomarh.com
             </a>
-            <span className="inline-flex items-center gap-2">
+            <a
+              href="tel:+5493493417640"
+              className="inline-flex items-center gap-2 whitespace-nowrap transition-opacity hover:opacity-60"
+            >
+              <span className="text-green">●</span>
+              +54 9 3493 41-7640
+            </a>
+            <span className="inline-flex items-center gap-2 whitespace-nowrap">
               <span className="text-green">●</span>
               Sunchales, Santa Fe, Argentina
             </span>
@@ -56,7 +63,7 @@ export default function Footer() {
         </div>
 
         {/* Fila media: columnas de links */}
-        <div className="mt-[clamp(3rem,7vw,6rem)] grid grid-cols-1 gap-8 sm:grid-cols-3">
+        <div className="mt-[clamp(3rem,7vw,6rem)] grid grid-cols-2 gap-8 sm:grid-cols-3">
           <ul className="flex flex-col gap-2 text-[0.9rem] font-medium uppercase tracking-[0.08em]">
             <li><Link href="/nosotros" className="transition-opacity hover:opacity-60">Nosotros</Link></li>
             <li><Link href="/servicios" className="transition-opacity hover:opacity-60">Servicios</Link></li>
@@ -87,16 +94,24 @@ export default function Footer() {
                 Email
               </a>
             </li>
+            <li>
+              <a
+                href="https://wa.me/5493493417640?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20consulta."
+                target="_blank"
+                rel="noopener"
+                className="transition-opacity hover:opacity-60"
+              >
+                WhatsApp
+              </a>
+            </li>
           </ul>
 
-          <ul className="flex flex-col gap-2 text-[0.9rem] font-medium uppercase tracking-[0.08em]">
-            <li>
-              <Link href="/legales/privacidad" className="transition-opacity hover:opacity-60">
+          <ul className="col-span-2 flex flex-col gap-2 text-[0.9rem] font-medium uppercase tracking-[0.08em] sm:col-span-1">
+            <li className="flex flex-nowrap gap-x-4">
+              <Link href="/legales/privacidad" className="whitespace-nowrap transition-opacity hover:opacity-60">
                 Política de Privacidad
               </Link>
-            </li>
-            <li>
-              <Link href="/legales/terminos" className="transition-opacity hover:opacity-60">
+              <Link href="/legales/terminos" className="whitespace-nowrap transition-opacity hover:opacity-60">
                 Términos de Servicio
               </Link>
             </li>
@@ -113,7 +128,18 @@ export default function Footer() {
 
         {/* Copyright fino */}
         <p className="mt-[clamp(2.5rem,5vw,4rem)] text-[0.72rem] uppercase tracking-[0.12em] text-navy-deep/50">
-          © {year} COMARH S.A. — Todos los derechos reservados.
+          Desarrollado por{" "}
+          <a
+            href="https://axusanalytics.com"
+            target="_blank"
+            rel="noopener"
+            className="font-bold text-navy-deep transition-opacity hover:opacity-60"
+          >
+            Axus Analytics
+          </a>
+        </p>
+        <p className="mt-2 text-[0.72rem] uppercase tracking-[0.12em] text-navy-deep/50">
+          © {year} COMARH SAS — Todos los derechos reservados.
         </p>
       </div>
 

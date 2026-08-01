@@ -68,7 +68,7 @@ export default function ContactModal() {
   };
 
   const field =
-    "w-full rounded bg-bg-alt px-3.5 py-3 text-navy outline-none border border-line focus:border-green-dark transition-colors";
+    "w-full rounded bg-bg-alt px-3.5 py-2.5 text-navy outline-none border border-line focus:border-green-dark transition-colors sm:py-3";
 
   return (
     <AnimatePresence>
@@ -82,7 +82,7 @@ export default function ContactModal() {
             onClick={close}
           />
           <motion.div
-            className="absolute right-0 top-0 flex h-full w-full max-w-[560px] flex-col overflow-y-auto overscroll-contain bg-white p-[clamp(1.75rem,4vw,2.75rem)]"
+            className="absolute right-0 top-0 flex h-full w-full max-w-[560px] flex-col overflow-y-auto overscroll-contain bg-white p-[clamp(1.25rem,4vw,2.75rem)]"
             data-lenis-prevent
             variants={reduce ? undefined : panel}
             initial={reduce ? { opacity: 0 } : "hidden"}
@@ -135,17 +135,17 @@ export default function ContactModal() {
                 </motion.div>
               ) : (
                 <motion.div key="form" exit={{ opacity: 0 }}>
-                  <h2 className="mb-3 text-[clamp(1.5rem,3.5vw,2.1rem)]">
+                  <h2 className="mb-1.5 text-[clamp(1.2rem,3.5vw,2.1rem)] sm:mb-3">
                     Trabajemos juntos: profesional, cercano y a medida.
                   </h2>
-                  <p className="mb-7 text-navy/70">
+                  <p className="mb-4 text-sm text-navy/70 sm:mb-7 sm:text-base">
                     Nos asociamos con empresas, municipios, ONGs y particulares
                     para desarrollar proyectos ambientales y de recursos hídricos
                     con rigor técnico. Contanos tu proyecto.
                   </p>
 
-                  <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4" noValidate>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <form onSubmit={handleSubmit(onSubmit)} className="grid gap-2.5 sm:gap-4" noValidate>
+                    <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-4">
                       <div>
                         <label className="mb-1.5 block text-xs font-medium text-navy/70">Nombre *</label>
                         <input className={field} {...register("nombre")} />
@@ -164,13 +164,13 @@ export default function ContactModal() {
                     </div>
                     <div>
                       <label className="mb-1.5 block text-xs font-medium text-navy/70">Mensaje *</label>
-                      <textarea rows={4} className={`${field} resize-y`} {...register("mensaje")} />
+                      <textarea rows={3} className={`${field} resize-y`} {...register("mensaje")} />
                       {errors.mensaje && <p className="mt-1 text-xs text-red-600">{errors.mensaje.message}</p>}
                     </div>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="group relative mt-1 inline-flex items-center gap-2 justify-self-start overflow-hidden rounded-full border border-navy bg-navy px-6 py-3 text-[0.8rem] font-medium uppercase tracking-[0.04em] text-white disabled:opacity-70"
+                      className="group relative mt-1 inline-flex items-center gap-2 justify-self-start overflow-hidden rounded-full border border-navy bg-navy px-6 py-2.5 text-[0.8rem] font-medium uppercase tracking-[0.04em] text-white disabled:opacity-70 sm:py-3"
                     >
                       {isSubmitting ? (
                         <>
@@ -183,21 +183,19 @@ export default function ContactModal() {
                     </button>
                   </form>
 
-                  <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-line pt-6 text-sm">
+                  <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-4 text-sm sm:mt-7 sm:gap-y-4 sm:pt-6">
                     <span>
                       <b>Email:</b>{" "}
                       <a href="mailto:contacto@consultoracomarh.com" className="text-green-dark">
                         contacto@consultoracomarh.com
                       </a>
                     </span>
-                    <a
-                      href="https://instagram.com/consultora_comarh_sa"
-                      target="_blank"
-                      rel="noopener"
-                      className="text-green-dark"
-                    >
-                      Instagram
-                    </a>
+                    <span>
+                      <b>Teléfono:</b>{" "}
+                      <a href="tel:+5493493417640" className="text-green-dark">
+                        +54 9 3493 41-7640
+                      </a>
+                    </span>
                   </div>
                 </motion.div>
               )}

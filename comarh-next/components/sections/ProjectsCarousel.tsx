@@ -118,16 +118,22 @@ export default function ProjectsCarousel() {
                 draggable={false}
                 className="group flex h-full flex-col overflow-hidden rounded border border-line bg-bg-alt"
               >
-                <div className="aspect-[3/2] overflow-hidden">
+                <div className="aspect-[3/2] overflow-hidden bg-bg-alt">
                   <motion.div layoutId={`project-image-${p.slug}`} className="h-full w-full">
-                    <Image
-                      src={p.cover}
-                      alt={p.title}
-                      width={700}
-                      height={467}
-                      draggable={false}
-                      className="h-full w-full object-cover transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.08]"
-                    />
+                    {p.cover ? (
+                      <Image
+                        src={p.cover}
+                        alt={p.title}
+                        width={700}
+                        height={467}
+                        draggable={false}
+                        className="h-full w-full object-contain p-2 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.08]"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-deep to-navy text-center text-xs font-semibold uppercase tracking-wide text-white/60">
+                        {p.categoryLabel}
+                      </div>
+                    )}
                   </motion.div>
                 </div>
                 <div className="flex flex-1 flex-col gap-2.5 p-6">
