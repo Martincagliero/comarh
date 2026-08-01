@@ -24,7 +24,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://consultoracomarh.com"),
+  metadataBase: new URL("https://www.comarh.com.ar"),
   title: {
     default: "COMARH S.A. — Consultora en Medio Ambiente y Recursos Hídricos",
     template: "%s · COMARH S.A.",
