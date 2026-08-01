@@ -112,7 +112,8 @@ export default function Footer() {
                 Política de Privacidad
               </Link>
               <Link href="/legales/terminos" className="whitespace-nowrap transition-opacity hover:opacity-60">
-                Términos de Servicio
+                <span className="sm:hidden">Términos</span>
+                <span className="hidden sm:inline">Términos de Servicio</span>
               </Link>
             </li>
             <li>
