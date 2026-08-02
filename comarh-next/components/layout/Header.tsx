@@ -46,10 +46,10 @@ export default function Header() {
         } ${hidden && !menuOpen ? "-translate-y-full" : "translate-y-0"}`}
       >
         <div className="flex h-[72px] items-center justify-between gap-6 px-[clamp(1.25rem,5vw,5rem)] md:h-[92px]">
-          <Link href="/" className="flex items-center" aria-label="COMARH S.A. — Inicio">
+          <Link href="/" className="flex items-center" aria-label="COMARH S.A.S. — Inicio">
             <Image
               src={solid ? "/img/logo-scroll.png" : "/img/logo-white-mark.png"}
-              alt="COMARH S.A."
+              alt="COMARH S.A.S."
               width={solid ? 542 : 512}
               height={solid ? 469 : 512}
               priority

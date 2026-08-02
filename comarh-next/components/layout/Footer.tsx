@@ -140,7 +140,7 @@ export default function Footer() {
           </a>
         </p>
         <p className="mt-2 text-[0.72rem] uppercase tracking-[0.12em] text-navy-deep/50">
-          © {year} COMARH SAS — Todos los derechos reservados.
+          © {year} COMARH S.A.S. — Todos los derechos reservados.
         </p>
       </div>
 

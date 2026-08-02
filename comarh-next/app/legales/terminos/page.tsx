@@ -20,13 +20,13 @@ export default function TerminosPage() {
         <h2>Uso del sitio</h2>
         <p>
           El contenido de este sitio tiene fines informativos sobre los servicios
-          de COMARH S.A. La información no constituye asesoramiento técnico ni
+          de COMARH S.A.S. La información no constituye asesoramiento técnico ni
           legal vinculante hasta la firma de un contrato de servicios.
         </p>
         <h2>Propiedad intelectual</h2>
         <p>
           Los textos, imágenes, logotipos y demás contenidos son propiedad de
-          COMARH S.A. o de sus respectivos titulares y no pueden reproducirse sin
+          COMARH S.A.S. o de sus respectivos titulares y no pueden reproducirse sin
           autorización.
         </p>
         <h2>Contacto</h2>

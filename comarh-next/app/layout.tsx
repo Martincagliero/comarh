@@ -26,8 +26,8 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.comarh.com.ar"),
   title: {
-    default: "COMARH S.A. — Consultora en Medio Ambiente y Recursos Hídricos",
-    template: "%s · COMARH S.A.",
+    default: "COMARH S.A.S. — Consultora en Medio Ambiente y Recursos Hídricos",
+    template: "%s · COMARH S.A.S.",
   },
   description:
     "Consultora ambiental y de recursos hídricos. Diseño, desarrollo de proyectos, asistencia técnica y consultoría con rigor técnico. Sunchales, Santa Fe.",
@@ -40,12 +40,12 @@ export const metadata: Metadata = {
     "COMARH",
   ],
   openGraph: {
-    title: "COMARH S.A. — Consultora en Medio Ambiente y Recursos Hídricos",
+    title: "COMARH S.A.S. — Consultora en Medio Ambiente y Recursos Hídricos",
     description:
       "Diseño, desarrollo de proyectos, asistencia técnica y consultoría ambiental a medida de cada cliente.",
     locale: "es_AR",
     type: "website",
-    images: [{ url: "/logoentero.png", width: 596, height: 842, alt: "COMARH S.A." }],
+    images: [{ url: "/logoentero.png", width: 596, height: 842, alt: "COMARH S.A.S." }],
   },
 };
 

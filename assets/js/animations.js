@@ -1,5 +1,5 @@
 /* ============================================================
-   COMARH S.A. — animations.js
+   COMARH S.A.S. — animations.js
    GSAP + ScrollTrigger + SplitType.
    SplitText de GSAP es de club premium -> usamos SplitType (MIT).
    Expone window.initAnimations(), llamada desde main.js.

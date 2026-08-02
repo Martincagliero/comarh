@@ -1,6 +1,6 @@
-# COMARH S.A. — Sitio web
+# COMARH S.A.S. — Sitio web
 
-Réplica funcional del sistema de layout/animaciones de eleos.la, rebrandeada y en español para COMARH S.A. (consultoría ambiental y recursos hídricos).
+Réplica funcional del sistema de layout/animaciones de eleos.la, rebrandeada y en español para COMARH S.A.S. (consultoría ambiental y recursos hídricos).
 
 ## Cómo abrirlo en local
 
@@ -51,7 +51,7 @@ assets/img/logo-comarh.svg         Logo placeholder (REEMPLAZAR por el PNG real)
 
 ## Datos del cliente ya cargados
 
-- Nombre: COMARH S.A.
+- Nombre: COMARH S.A.S.
 - Email: contacto@consultoracomarh.com
 - Instagram: instagram.com/consultora_comarh_sa
 - Ubicación / reloj en vivo: Sunchales, Santa Fe

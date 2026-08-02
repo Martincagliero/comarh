@@ -1,5 +1,5 @@
 /* ============================================================
-   COMARH S.A. — main.js
+   COMARH S.A.S. — main.js
    Lenis smooth scroll + GSAP init + UI (header, reloj, modal,
    menú mobile, cursor, loader, back-to-top).
    ============================================================ */

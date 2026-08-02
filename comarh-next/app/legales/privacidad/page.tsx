@@ -13,7 +13,7 @@ export default function PrivacidadPage() {
 
       <div className="mt-8 flex flex-col gap-5 text-navy/80 [&_h2]:mt-6 [&_h2]:text-xl [&_h2]:text-navy">
         <p>
-          En COMARH S.A. valoramos la privacidad de las personas que se ponen en
+          En COMARH S.A.S. valoramos la privacidad de las personas que se ponen en
           contacto con nosotros. Este documento describe cómo tratamos los datos
           que nos proporcionás. (Reemplazar por el texto legal definitivo revisado
           por un profesional.)
