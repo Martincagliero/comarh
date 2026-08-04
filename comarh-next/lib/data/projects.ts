@@ -391,8 +391,8 @@ export const projects: Project[] = [
       "/img/proyectos/ampliacion-red-interna-gas-natural-yeruva/g2.png",
     ],
     galleryCaptions: {
-      "/img/proyectos/ampliacion-red-interna-gas-natural-yeruva/g1.png": "Solicitud de factibilidad",
-      "/img/proyectos/ampliacion-red-interna-gas-natural-yeruva/g2.png": "Solicitud de factibilidad",
+      "/img/proyectos/ampliacion-red-interna-gas-natural-yeruva/g1.png": "Planilla de cálculo",
+      "/img/proyectos/ampliacion-red-interna-gas-natural-yeruva/g2.png": "Planilla de artefactos - Solicitud de factibilidad",
     },
     client: "Yeruvá S.A.",
     year: "2026",
