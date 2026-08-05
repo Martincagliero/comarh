@@ -135,7 +135,6 @@ export const projects: Project[] = [
       "Anteproyecto y proyecto ejecutivo con verificaciones hidráulicas del acueducto del sistema de provisión de agua potable para las localidades de El Colorado y Los Juries, con planos de detalles electromecánicos.",
     category: "civil-hidraulica",
     categoryLabel: categoryLabels["civil-hidraulica"],
-    cover: "/img/proyectos/verificaciones-hidraulicas-perales-aguiar/cover.png",
     gallery: ["/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png"],
     galleryCaptions: {
       "/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png": "Planos de detalle electromecánico",
@@ -155,10 +154,12 @@ export const projects: Project[] = [
     gallery: [
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g1.png",
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g2.png",
+      "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g4.png",
     ],
     galleryCaptions: {
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g1.png": "Sección transversal Prog. +2700 — Traza Norte",
       "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g2.png": "Mancha de inundación y alcance proyectado",
+      "/img/proyectos/alteo-proteccion-planta-urbana-saguier/g4.png": "Perfil longitudinal proyectado — Traza Norte",
     },
     comitente: "Comité de Cuenca Canal Principal Saguier",
     year: "2024",
