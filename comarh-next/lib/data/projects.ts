@@ -135,6 +135,7 @@ export const projects: Project[] = [
       "Anteproyecto y proyecto ejecutivo con verificaciones hidráulicas del acueducto del sistema de provisión de agua potable para las localidades de El Colorado y Los Juries, con planos de detalles electromecánicos.",
     category: "civil-hidraulica",
     categoryLabel: categoryLabels["civil-hidraulica"],
+    cover: "/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png",
     gallery: ["/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png"],
     galleryCaptions: {
       "/img/proyectos/verificaciones-hidraulicas-perales-aguiar/g1.png": "Planos de detalle electromecánico",
