@@ -29,6 +29,133 @@ const categoryLabels: Record<ProjectCategory, string> = {
 // Contenido extraído del relevamiento de proyectos por rubro (PDF cargado por el cliente).
 export const projects: Project[] = [
   {
+    slug: "factibilidad-hidrogeologico-sunchales-ypf",
+    title: "Estudio de Factibilidad Hídrica e Hidrogeológica — YPF Sunchales",
+    description:
+      "Estudio de impacto hídrico e hidrogeológico para evaluar la viabilidad del proyecto y asegurar que no se generen impactos negativos sobre el entorno. Incluye el relevamiento del sector de interés, la elaboración del modelo digital de elevaciones y la modelación hidrológica del escenario de mayor severidad, correspondiente a una recurrencia de 100 años, con análisis de tirantes y funcionamiento de alcantarillas.",
+    location: "Sunchales, Santa Fe",
+    category: "ambiental-hidrogeologia",
+    categoryLabel: categoryLabels["ambiental-hidrogeologia"],
+    cover: "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/cover.png",
+    gallery: [
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g1.png",
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g2.png",
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g3.png",
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g4.png",
+    ],
+    galleryCaptions: {
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g1.png": "Modelo digital de elevaciones del área relevada",
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g2.png": "Resultados para una recurrencia de 100 años sobre el modelo digital de elevaciones",
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g3.png": "Resultados para una recurrencia de 100 años sobre imagen satelital",
+      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g4.png": "Resultados de la alcantarilla n.º 1 para una recurrencia de 100 años",
+    },
+    client: "YPF Sunchales",
+    year: "2025/2026",
+  },
+  {
+    slug: "riesgo-hidrico-oleoducto-lomas-medanito",
+    title: "Estudio de Riesgo Hídrico — Oleoducto Lomas–Medanito",
+    description:
+      "Estudio del riesgo hídrico sobre la traza de 29 km del oleoducto de acero DN 12 pulgadas entre Lomas y Medanito. Se caracterizaron los procesos de escurrimiento superficial, erosión general y erosión lateral asociados a los sistemas fluviales efímeros del área, y se identificaron y dimensionaron medidas de mitigación para garantizar la integridad de la instalación durante su vida útil.",
+    location: "Lomas–Medanito, Río Negro",
+    category: "civil-hidraulica",
+    categoryLabel: categoryLabels["civil-hidraulica"],
+    cover: "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/cover.jpg",
+    gallery: [
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g1.png",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g2.png",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g3.jpg",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g4.jpg",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g5.png",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g6.png",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g7.png",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g8.png",
+    ],
+    galleryCaptions: {
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g1.png": "Modelo hidrológico de las cuencas",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g2.png": "Resultados de la modelación hidráulica 2D en HEC-RAS",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g3.jpg": "Esquema de obras de mitigación en la bajada de barda",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g4.jpg": "Modelo del terreno y obras de mitigación",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g5.png": "Cruce especial del oleoducto bajo la Ruta Nacional N.º 151",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g6.png": "Punto de riesgo hídrico y perfil de soterramiento",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g7.png": "Planimetría general de obras en la bajada de barda",
+      "/img/proyectos/riesgo-hidrico-oleoducto-lomas-medanito/g8.png": "Perfiles generales de obras en la bajada de barda",
+    },
+    client: "Tango Energy",
+    year: "2026",
+  },
+  {
+    slug: "centro-distribucion-oeste-funes",
+    title: "Centro de Distribución Oeste — Funes",
+    description:
+      "Proyecto integral de la Cisterna de Distribución Oeste, con una capacidad de 750 m³. Incluye perforaciones en los acuíferos Pampeano y Puelche, acueductos de alimentación, una planta de ósmosis inversa con una producción de 50 m³/h, sistema de bombeo mediante bombas de turbina vertical de 155 m³/h a 44 m.c.a. y la cañería de alimentación de la red hasta la salida del predio.",
+    location: "Funes, Santa Fe",
+    category: "civil-hidraulica",
+    categoryLabel: categoryLabels["civil-hidraulica"],
+    cover: "/img/proyectos/centro-distribucion-oeste-funes/cover.png",
+    gallery: [
+      "/img/proyectos/centro-distribucion-oeste-funes/g1.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g2.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g3.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g4.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g5.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g6.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g7.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g8.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g9.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g10.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g11.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g12.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g13.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g14.png",
+      "/img/proyectos/centro-distribucion-oeste-funes/g15.png",
+    ],
+    galleryCaptions: {
+      "/img/proyectos/centro-distribucion-oeste-funes/g1.png": "Modelo estructural de la cisterna",
+      "/img/proyectos/centro-distribucion-oeste-funes/g2.png": "Planos de estructuras de la cisterna",
+      "/img/proyectos/centro-distribucion-oeste-funes/g3.png": "Planos de estructuras de la cisterna",
+      "/img/proyectos/centro-distribucion-oeste-funes/g4.png": "Modelo estructural de salas",
+      "/img/proyectos/centro-distribucion-oeste-funes/g5.png": "Modelo estructural de salas",
+      "/img/proyectos/centro-distribucion-oeste-funes/g6.png": "Planos de estructuras de salas",
+      "/img/proyectos/centro-distribucion-oeste-funes/g7.png": "Planos de estructuras de salas",
+      "/img/proyectos/centro-distribucion-oeste-funes/g8.png": "Perforaciones y acueducto de agua cruda",
+      "/img/proyectos/centro-distribucion-oeste-funes/g9.png": "Perforaciones y acueducto de agua cruda",
+      "/img/proyectos/centro-distribucion-oeste-funes/g10.png": "Perforaciones y acueducto de agua cruda",
+      "/img/proyectos/centro-distribucion-oeste-funes/g11.png": "Perforaciones y acueducto de agua cruda",
+      "/img/proyectos/centro-distribucion-oeste-funes/g12.png": "Obras a desarrollar en la cisterna",
+      "/img/proyectos/centro-distribucion-oeste-funes/g13.png": "Obras a desarrollar en la cisterna",
+      "/img/proyectos/centro-distribucion-oeste-funes/g14.png": "Obras a desarrollar en la cisterna",
+      "/img/proyectos/centro-distribucion-oeste-funes/g15.png": "Obras a desarrollar en la cisterna",
+    },
+    client: "Winkelmann S.R.L.",
+    year: "2026",
+  },
+  {
+    slug: "provision-electromecanica-carlos-casares",
+    title: "Provisión de Equipamiento Electromecánico y Pozo de Bombeo Prefabricado Grundfos",
+    description:
+      "Provisión de equipamiento electromecánico y un pozo de bombeo prefabricado en PRFV para el desarrollo del loteo. El conjunto incluye pozo de bombeo y cámara de válvulas, componentes interiores en acero inoxidable AISI 304, válvulas AVK, bomba cloacal Grundfos SL1 y tablero de control LC1.",
+    location: "Carlos Casares",
+    category: "obras-especiales",
+    categoryLabel: categoryLabels["obras-especiales"],
+    cover: "/img/proyectos/provision-electromecanica-carlos-casares/cover.jpeg",
+    gallery: [
+      "/img/proyectos/provision-electromecanica-carlos-casares/g1.jpeg",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g2.jpeg",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g3.jpeg",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g4.jpeg",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g5.jpeg",
+    ],
+    galleryCaptions: {
+      "/img/proyectos/provision-electromecanica-carlos-casares/g1.jpeg": "Pozo de bombeo PRFV y cámara de válvulas",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g2.jpeg": "Vista interior de la estación de bombeo PRFV, con componentes en AISI 304",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g3.jpeg": "Vista interior de la cámara de válvulas, con componentes en AISI 304 y válvulas AVK",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g4.jpeg": "Bomba cloacal Grundfos modelo SL1",
+      "/img/proyectos/provision-electromecanica-carlos-casares/g5.jpeg": "Tablero de control Grundfos modelo LC1",
+    },
+    year: "2026",
+  },
+  {
     slug: "acueducto-desvio-arijon",
     title: "Acueducto Desvío Arijón — Ampliación Etapa 1, Ramal B° Jorge Newbery",
     description:
@@ -339,26 +466,6 @@ export const projects: Project[] = [
     year: "2022",
   },
   {
-    slug: "factibilidad-hidrogeologico-sunchales-ypf",
-    title: "Estudio de Factibilidad Hídrica y Análisis Hidrogeológico — Ciudad de Sunchales",
-    description:
-      "Estudio de impacto hídrico para evaluar la viabilidad del proyecto y asegurar que no se generen impactos negativos sobre el entorno, obteniendo el certificado de factibilidad hídrica. Estudio hidrogeológico complementario para determinar la profundidad, comportamiento y dirección del nivel freático, como aporte al Estudio de Impacto Ambiental y al diseño de la futura red de monitoreo.",
-    location: "Sunchales, Santa Fe",
-    category: "ambiental-hidrogeologia",
-    categoryLabel: categoryLabels["ambiental-hidrogeologia"],
-    cover: "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/cover.png",
-    gallery: [
-      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g1.png",
-      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g2.png",
-    ],
-    galleryCaptions: {
-      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g1.png": "Ejecución de pozos de sondeo",
-      "/img/proyectos/factibilidad-hidrogeologico-sunchales-ypf/g2.png": "Plano de dinámica hídrica",
-    },
-    client: "YPF Sunchales",
-    year: "2025/2026",
-  },
-  {
     slug: "analisis-hidrogeologico-pozos-monitoreo-airsa",
     title: "Análisis Hidrogeológico para Ubicación de Pozos de Monitoreo",
     description:
@@ -439,28 +546,9 @@ export const projects: Project[] = [
     client: "Mundo Construcciones S.A.",
     year: "2026",
   },
-  {
-    slug: "provision-electromecanica-carlos-casares",
-    title: "Provisión de Equipamiento Electromecánico y Pozo de Bombeo Prefabricado Grundfos",
-    description:
-      "Provisión de equipamiento electromecánico y pozo de bombeo prefabricado Grundfos para el desarrollo del loteo.",
-    location: "Carlos Casares",
-    category: "obras-especiales",
-    categoryLabel: categoryLabels["obras-especiales"],
-    cover: "/img/proyectos/provision-electromecanica-carlos-casares/cover.jpeg",
-    gallery: [
-      "/img/proyectos/provision-electromecanica-carlos-casares/g1.jpeg",
-      "/img/proyectos/provision-electromecanica-carlos-casares/g2.png",
-      "/img/proyectos/provision-electromecanica-carlos-casares/g3.png",
-    ],
-    galleryCaptions: {
-      "/img/proyectos/provision-electromecanica-carlos-casares/g2.png": "Vistas planos de proyecto ejecutivo",
-      "/img/proyectos/provision-electromecanica-carlos-casares/g3.png": "Vistas planos de proyecto ejecutivo",
-    },
-    client: "Desarrollo Loteos Carlos Casares",
-    year: "2026",
-  },
 ];
+
+export const recentProjects = projects.slice(0, 4);
 
 export const getProject = (slug: string) =>
   projects.find((p) => p.slug === slug);

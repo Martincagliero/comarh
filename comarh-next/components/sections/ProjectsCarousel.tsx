@@ -11,7 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionValue } from "motion/react";
-import { projects } from "@/lib/data/projects";
+import { recentProjects } from "@/lib/data/projects";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 export default function ProjectsCarousel() {
@@ -45,7 +45,7 @@ export default function ProjectsCarousel() {
         <div className="mb-12 flex flex-wrap items-end justify-between gap-8">
           <div className="max-w-[40ch]">
             <RevealOnScroll>
-              <p className="eyebrow">Proyectos</p>
+              <p className="eyebrow">Proyectos recientes</p>
             </RevealOnScroll>
             <RevealOnScroll delay={0.05}>
               <h2 className="h2-fluid mt-3">
@@ -54,13 +54,13 @@ export default function ProjectsCarousel() {
             </RevealOnScroll>
             <RevealOnScroll delay={0.1}>
               <p className="mt-4 text-[clamp(1.05rem,1.6vw,1.4rem)] text-navy/70">
-                Soluciones diseñadas a medida de cada cliente y cada territorio. Deslizá para ver todos.
+                Soluciones diseñadas a medida de cada cliente y cada territorio. Deslizá para conocerlas.
               </p>
             </RevealOnScroll>
           </div>
           <div className="flex items-center gap-3 sm:gap-6">
             <span className="tabular-nums text-xs text-navy/60 sm:text-sm">
-              {String(active + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+              {String(active + 1).padStart(2, "0")} / {String(recentProjects.length).padStart(2, "0")}
             </span>
             <div className="flex items-center gap-1.5 sm:gap-2">
               <button
@@ -101,7 +101,7 @@ export default function ProjectsCarousel() {
         dragElastic={0.08}
         className="flex cursor-grab gap-5 px-[clamp(1.25rem,5vw,5rem)] active:cursor-grabbing"
       >
-        {projects.map((p, i) => (
+        {recentProjects.map((p, i) => (
           <motion.div
             key={p.slug}
             onViewportEnter={() => setActive(i)}

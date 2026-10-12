@@ -18,4 +18,5 @@ export const partners: Partner[] = [
   { name: "AIRSA Agroindustrias Regionales", logo: "/img/clientes/airsa-agroindustrias.png" },
   { name: "Yeruvá", logo: "/img/clientes/yeruva.png" },
   { name: "S.C.C.", logo: "/img/clientes/scc-club.png" },
+  { name: "TanGo Energy", logo: "/img/clientes/tango-energy.png" },
 ];
