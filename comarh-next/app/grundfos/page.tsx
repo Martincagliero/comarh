@@ -5,6 +5,7 @@ import AnimatedText from "@/components/ui/AnimatedText";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import CtaFullbleed from "@/components/sections/CtaFullbleed";
 import GrundfosCatalog from "@/components/sections/GrundfosCatalog";
+import SolarPumping from "@/components/sections/SolarPumping";
 import { grundfosProducts } from "@/lib/data/grundfos";
 
 export const metadata: Metadata = {
@@ -51,6 +52,8 @@ export default function GrundfosPage() {
       </section>
 
       <GrundfosCatalog products={grundfosProducts} />
+
+      <SolarPumping />
 
       <CtaFullbleed title="¿Necesitás un equipo Grundfos a medida? Escribinos." />
     </>
