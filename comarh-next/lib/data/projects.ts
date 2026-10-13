@@ -156,6 +156,47 @@ export const projects: Project[] = [
     year: "2026",
   },
   {
+    slug: "factibilidad-hidrica-analisis-hidrogeologico-sunchales-ypf",
+    title: "Estudio de Factibilidad Hídrica y Análisis Hidrogeológico — Ciudad de Sunchales",
+    description:
+      "Estudio de impacto hídrico para evaluar la viabilidad del proyecto y asegurar que no se generen impactos negativos sobre el entorno, obteniendo el certificado de factibilidad hídrica. Estudio hidrogeológico complementario para determinar la profundidad, comportamiento y dirección del nivel freático, como aporte al Estudio de Impacto Ambiental y al diseño de la futura red de monitoreo.",
+    location: "Sunchales, Santa Fe",
+    category: "ambiental-hidrogeologia",
+    categoryLabel: categoryLabels["ambiental-hidrogeologia"],
+    cover: "/img/proyectos/factibilidad-hidrica-analisis-hidrogeologico-sunchales-ypf/cover.png",
+    gallery: [
+      "/img/proyectos/factibilidad-hidrica-analisis-hidrogeologico-sunchales-ypf/g1.png",
+      "/img/proyectos/factibilidad-hidrica-analisis-hidrogeologico-sunchales-ypf/g2.png",
+    ],
+    galleryCaptions: {
+      "/img/proyectos/factibilidad-hidrica-analisis-hidrogeologico-sunchales-ypf/g1.png": "Ejecución de pozos de sondeo",
+      "/img/proyectos/factibilidad-hidrica-analisis-hidrogeologico-sunchales-ypf/g2.png": "Plano de dinámica hídrica",
+    },
+    client: "YPF Sunchales",
+    year: "2025/2026",
+  },
+  {
+    slug: "provision-electromecanica-loteo-carlos-casares",
+    title: "Provisión de Equipamiento Electromecánico y Pozo de Bombeo Prefabricado Grundfos",
+    description:
+      "Provisión de equipamiento electromecánico y pozo de bombeo prefabricado Grundfos para el desarrollo del loteo.",
+    location: "Carlos Casares",
+    category: "obras-especiales",
+    categoryLabel: categoryLabels["obras-especiales"],
+    cover: "/img/proyectos/provision-electromecanica-loteo-carlos-casares/cover.jpeg",
+    gallery: [
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g1.jpeg",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g2.png",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g3.png",
+    ],
+    galleryCaptions: {
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g2.png": "Vistas planos de proyecto ejecutivo",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g3.png": "Vistas planos de proyecto ejecutivo",
+    },
+    client: "Desarrollo Loteos Carlos Casares",
+    year: "2026",
+  },
+  {
     slug: "acueducto-desvio-arijon",
     title: "Acueducto Desvío Arijón — Ampliación Etapa 1, Ramal B° Jorge Newbery",
     description:
