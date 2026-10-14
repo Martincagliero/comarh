@@ -145,6 +145,10 @@ export const projects: Project[] = [
       "/img/proyectos/provision-electromecanica-carlos-casares/g3.jpeg",
       "/img/proyectos/provision-electromecanica-carlos-casares/g4.jpeg",
       "/img/proyectos/provision-electromecanica-carlos-casares/g5.jpeg",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/cover.jpeg",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g1.jpeg",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g2.png",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g3.png",
     ],
     galleryCaptions: {
       "/img/proyectos/provision-electromecanica-carlos-casares/g1.jpeg": "Pozo de bombeo PRFV y cámara de válvulas",
@@ -152,7 +156,12 @@ export const projects: Project[] = [
       "/img/proyectos/provision-electromecanica-carlos-casares/g3.jpeg": "Vista interior de la cámara de válvulas, con componentes en AISI 304 y válvulas AVK",
       "/img/proyectos/provision-electromecanica-carlos-casares/g4.jpeg": "Bomba cloacal Grundfos modelo SL1",
       "/img/proyectos/provision-electromecanica-carlos-casares/g5.jpeg": "Tablero de control Grundfos modelo LC1",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/cover.jpeg": "Pozo de bombeo prefabricado Grundfos",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g1.jpeg": "Pozo de bombeo prefabricado Grundfos",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g2.png": "Vistas de planos del proyecto ejecutivo",
+      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g3.png": "Vistas de planos del proyecto ejecutivo",
     },
+    client: "Desarrollo Loteos Carlos Casares",
     year: "2026",
   },
   {
@@ -174,27 +183,6 @@ export const projects: Project[] = [
     },
     client: "YPF Sunchales",
     year: "2025/2026",
-  },
-  {
-    slug: "provision-electromecanica-loteo-carlos-casares",
-    title: "Provisión de Equipamiento Electromecánico y Pozo de Bombeo Prefabricado Grundfos",
-    description:
-      "Provisión de equipamiento electromecánico y pozo de bombeo prefabricado Grundfos para el desarrollo del loteo.",
-    location: "Carlos Casares",
-    category: "obras-especiales",
-    categoryLabel: categoryLabels["obras-especiales"],
-    cover: "/img/proyectos/provision-electromecanica-loteo-carlos-casares/cover.jpeg",
-    gallery: [
-      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g1.jpeg",
-      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g2.png",
-      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g3.png",
-    ],
-    galleryCaptions: {
-      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g2.png": "Vistas planos de proyecto ejecutivo",
-      "/img/proyectos/provision-electromecanica-loteo-carlos-casares/g3.png": "Vistas planos de proyecto ejecutivo",
-    },
-    client: "Desarrollo Loteos Carlos Casares",
-    year: "2026",
   },
   {
     slug: "acueducto-desvio-arijon",
